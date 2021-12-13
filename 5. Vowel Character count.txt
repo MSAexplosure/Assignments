@@ -1,0 +1,71 @@
+//PSEUDOCODE
+
+DECLARE str1, character, vowel : STRING
+DECLARE i, vcount, ccount : INTEGER
+DECLARE thischar : CHARACTER
+
+str1 <-- ""
+character <-- "bcdfghjklmnpqrstvwxyz"
+vowel <-- "aeiou"
+i <-- 0
+vcount <-- 0
+ccount <-- 0
+thischar <-- ''
+
+INPUT "Enter your string: ", str1
+str1 <-- LCASE(str1)
+
+FOR i <-- 1 TO LEN(str1)
+    thischar <-- MID(str1, i, 1)
+    For c <-- 1 TO LEN(character)
+        IF thischar = MID(character, c, 1) THEN
+            ccount <-- ccount + 1
+        END IF
+    NEXT
+    FOR v <-- 1 TO LEN(vowel)
+        IF thischar = MID(vowel, v, 1) THEN
+            vcount <-- vcount + 1
+        END IF
+    NEXT
+NEXT
+
+OUTPUT "Number of character in your string are: ", ccount
+OUTPUT "Number of vowel in your string are: ", vcount
+
+------------------------------------------------------------------
+
+//VISUAL BASIC
+
+Dim str1, character, vowel As String
+Dim i, vcount, ccount As Integer
+Dim thischar As Char
+
+str1 = ""
+character = "bcdfghjklmnpqrstvwxyz"
+vowel = "aeiou"
+i = 0
+vcount = 0
+ccount = 0
+thischar = ""
+
+Console.Write("Enter your string: ")
+str1 = Console.ReadLine
+str1 = LCase(str1)
+
+For i = 1 To Len(str1)
+    thischar = Mid(str1, i, 1)
+    For c = 1 To Len(character)
+        If thischar = Mid(character, c, 1) Then
+            ccount = ccount + 1
+        End If
+    Next
+    For v = 1 To Len(vowel)
+        If thischar = Mid(vowel, v, 1) Then
+            vcount = vcount + 1
+        End If
+    Next
+Next
+
+Console.WriteLine("Number of character in your string are: " & ccount)
+Console.WriteLine("Number of vowel in your string are: " & vcount)
+Console.ReadKey()
