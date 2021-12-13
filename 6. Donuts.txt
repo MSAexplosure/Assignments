@@ -1,0 +1,39 @@
+//PSEUDOCODE
+
+DECLARE str : STRING
+DECLARE dn : INTEGER
+
+dn <-- 0
+str <-- ""
+
+INPUT "Donuts: ", dn
+
+IF dn < 10 THEN
+    str <-- dn
+ELSEIF dn >= 10 THEN
+    str <-- "many"
+END IF
+
+OUTPUT "Number of donuts: ", str
+
+---------------------------------------
+
+//VISUAL BASIC
+
+Dim str As String
+Dim dn As Integer
+
+dn = 0
+str = ""
+
+Console.Write("Donuts: ")
+dn = Console.ReadLine
+
+If dn < 10 Then
+    str = dn
+ElseIf dn >= 10 Then
+    str = "many"
+End If
+
+Console.WriteLine("Number of donuts: " & str)
+Console.ReadKey()
