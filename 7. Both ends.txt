@@ -1,0 +1,37 @@
+//PSEUDOCODE
+
+DECLARE str1, str2 : STRING
+
+str1 <-- ""
+str2 <-- ""
+
+INPUT "Input your word: ", str1
+
+IF LEN(str1) < 2 THEN
+    str2 <-- str1
+ELSE
+    str2 <-- LEFT(str1, 2) & RIGHT(str1, 2)
+END IF
+
+OUTPUT "Your string is now: ", str2
+
+----------------------------------------------------
+
+//VISUAL BASIC
+
+Dim str1, str2 As String
+
+str1 = ""
+str2 = ""
+
+Console.Write("Input your word: ")
+str1 = Console.ReadLine
+
+If Len(str1) < 2 Then
+    str2 = str1
+Else
+    str2 = Left(str1, 2) & Right(str1, 2)
+End If
+
+Console.WriteLine("Your string is now: " & str2)
+Console.ReadKey()
