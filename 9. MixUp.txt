@@ -1,0 +1,43 @@
+//PSEUDOCODE
+
+DECLARE a, b, str1, str2, mergedstr : STRING
+
+str1 <-- ""
+str2 <-- ""
+a <-- ""
+b <-- ""
+mergedstr <-- ""
+
+INPUT "Input your first word: ", str1
+INPUT "Input your second word: ", str2
+
+a <-- LEFT(str2, 2) & MID(str1, 3, LEN(str1))
+b <-- LEFT(str1, 2) & MID(str2, 3, LEN(str2))
+mergedstr <-- a & " " & b
+
+OUTPUT "Your new string is: ", mergedstr
+
+----------------------------------------------------
+
+//VISUAL BASIC
+
+Dim a, b, str1, str2, mergedstr As String
+
+str1 = ""
+str2 = ""
+a = ""
+b = ""
+mergedstr = ""
+
+
+Console.Write("Input your first word: ")
+str1 = Console.ReadLine
+Console.Write("Input your second word: ")
+str2 = Console.ReadLine
+
+a = Left(str2, 2) & Mid(str1, 3, Len(str1))
+b = Left(str1, 2) & Mid(str2, 3, Len(str2))
+mergedstr = a & " " & b
+
+Console.WriteLine("Your new string is: " & mergedstr)
+Console.ReadKey()
