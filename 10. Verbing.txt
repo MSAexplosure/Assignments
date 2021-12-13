@@ -1,0 +1,45 @@
+//PSEUDOCODE
+
+DECLARE str1, str2 : STRING
+
+str1 <-- ""
+str2 <-- ""
+
+INPUT "Input your word: ", str1
+
+FOR i <-- 1 TO LEN(str1)
+    IF i < 3 THEN
+        str2 <-- str1
+    ELSEIF i >= 3 AND RIGHT(str1, 3) = "ing" THEN
+        str2 <-- str1 & "ly"
+    ELSEIF i >= 3 AND RIGHT(str1, 3) <> "ing" THEN
+        str2 <-- str1 & "ing"
+    END IF
+NEXT
+
+OUTPUT "Your word has become: ", str2
+
+----------------------------------------------------
+
+//VISUAL BASIC
+
+Dim str1, str2 As String
+
+str1 = ""
+str2 = ""
+
+Console.Write("Input your word: ")
+str1 = Console.ReadLine
+
+For i = 1 To Len(str1)
+    If i < 3 Then
+        str2 = str1
+    ElseIf i >= 3 And Right(str1, 3) = "ing" Then
+        str2 = str1 & "ly"
+    ElseIf i >= 3 And Right(str1, 3) <> "ing" Then
+        str2 = str1 & "ing"
+    End If
+Next
+
+Console.WriteLine("Your word has become: " & str2)
+Console.ReadKey()
