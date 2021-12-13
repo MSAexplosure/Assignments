@@ -1,0 +1,63 @@
+//PSEUDOCODE
+
+DECLARE str1, str2 : STRING
+DECLARE char1, char2, char3 : CHARACTER
+DECLARE i : INTEGER
+
+str1 <-- ""
+str2 <-- ""
+char1 <-- ''
+char2 <-- ''
+char3 <-- ''
+i <-- 0
+
+INPUT "Enter string to process: ", str1
+INPUT "Input character you want to extract from string: ", char1
+INPUT "Input character you want to replace with in string: ", char3
+
+FOR i <-- 1 TO LEN(str1)
+    char2 <-- MID(str1, i, 1)
+    IF char1 <> char2 THEN
+        str2 <-- str2 & char2
+    ELSE
+        str2 <-- str2 & char3
+    END IF
+NEXT
+
+OUTPUT "Your string after replacement is: ", str2
+
+-------------------------------------------------------------------------------
+
+//VISUAL BASIC
+
+Dim str1, str2 As String
+Dim char1, char2, char3 As Char
+Dim i As Integer
+
+str1 = ""
+str2 = ""
+char1 = ""
+char2 = ""
+char3 = ""
+i = 0
+
+Console.Write("Enter string to process: ")
+str1 = Console.ReadLine
+
+Console.Write("Input character you want to extract from string: ")
+char1 = Console.ReadLine
+
+Console.Write("Input character you want to replace with in string: ")
+char3 = Console.ReadLine()
+
+For i = 1 To Len(str1)
+    char2 = Mid(str1, i, 1)
+    If char1 <> char2 Then
+str2 = str2 & char2
+    Else
+str2 = str2 & char3
+    End If
+Next
+
+Console.WriteLine("Your string after replacement is: " & str2)
+Console.ReadKey()
