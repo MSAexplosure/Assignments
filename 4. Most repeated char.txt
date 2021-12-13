@@ -1,0 +1,73 @@
+//PSEUDOCODE
+
+DECLARE str1 : STRING
+DECLARE mostrepeatedchar, thisChar, nextChar : CHARACTER
+DECLARE occurance, Count, i, m : INTEGER
+
+str1 <-- ""
+mostrepeatedchar <-- ''
+thisChar <-- ''
+nextChar <-- ''
+occurance <-- 0
+Count <-- 0
+i <-- 0
+m <-- 0
+
+INPUT "Enter string to process: ", str1
+
+FOR i <-- 1 TO LEN(str1)
+    nextChar <-- MID(str1, i, 1)
+    Count <-- 0
+    FOR m <-- 1 TO LEN(str1)
+        thisChar <-- MID(str1, m, 1)
+        IF thisChar = nextChar THEN
+            Count <-- Count + 1
+        END IF
+    NEXT
+    IF Count > occurance THEN
+        occurance <-- Count
+        mostrepeatedchar <-- nextChar
+    END IF
+NEXT
+
+OUTPUT "The character which appeared most number of times is: ", mostrepeatedchar
+OUTPUT "The number of times it appeared is: ", occurance
+
+-----------------------------------------------------------------------------------------
+
+//VISUAL BASIC
+
+Dim str1 As String
+Dim mostrepeatedchar, thisChar, nextChar As Char
+Dim occurance, Count, i, m As Integer
+
+str1 = ""
+mostrepeatedchar = ""
+thisChar = ""
+nextChar = ""
+occurance = 0
+Count = 0
+i = 0
+m = 0
+
+Console.Write("Enter string to process: ")
+str1 = Console.ReadLine
+
+For i = 1 To Len(str1)
+    nextChar = Mid(str1, i, 1)
+    Count = 0
+    For m = 1 To Len(str1)
+        thisChar = Mid(str1, m, 1)
+        If thisChar = nextChar Then
+            Count = Count + 1
+        End If
+    Next
+    If Count > occurance Then
+        occurance = Count
+        mostrepeatedchar = nextChar
+    End If
+Next
+
+Console.WriteLine("The character which appeared most number of times is: " & mostrepeatedchar)
+Console.WriteLine("The number of times it appeared is: " & occurance)
+Console.ReadKey()
