@@ -1,0 +1,52 @@
+//PSEUDOCODE
+
+DECLARE str1, str2 : STRING
+DECLARE fchar, char2 : CHARACTER
+
+str1 <-- ""
+str2 <-- ""
+fchar <-- ''
+char2 <-- ''
+
+INPUT "Input your string: ", str1
+
+fchar <-- LEFT(str1, 1)
+str2 <-- fchar
+FOR i <-- 2 TO LEN(str1)
+    char2 <-- MID(str1, i, 1)
+    IF char2 <-- fchar THEN
+        str2 <-- str2 & "*"
+    ELSE
+        str2 <-- str2 & char2
+    END IF
+NEXT
+
+OUTPUT "The new string is: ", str2
+
+----------------------------------------------------
+
+Dim str1, str2 As String
+Dim fchar, char2 As Char
+
+str1 = ""
+str2 = ""
+fchar = ""
+char2 = ""
+
+Console.Write("Input your string: ")
+str1 = Console.ReadLine
+str1 = LCase(str1)
+
+fchar = Left(str1, 1)
+str2 = fchar
+For i = 2 To Len(str1)
+    char2 = Mid(str1, i, 1)
+    If char2 = fchar Then
+        str2 = str2 & "*"
+    Else
+        str2 = str2 & char2
+    End If
+Next
+
+Console.WriteLine("The new string is: " & str2)
+Console.ReadKey()
